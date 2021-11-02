@@ -1,0 +1,166 @@
+body {
+  font-size: 18pt;
+  background: #ECEFF1;
+}
+
+.OuterBlock {
+  margin-left: 100px;
+  background: #f2f2f2;
+}
+
+.InnerBlock {
+  display: inline-block;
+  background: #e2e2e2;
+}
+.InnerBlock:not(:first-child) {
+  margin-left: 100px;
+}
+
+.InnerBlock > span {
+  display: block;
+}
+.InnerBlock > span::selection,
+.InnerBlock > span *::selection {
+  color: lime;
+  background: black;
+}
+
+.OuterBlock_1 {
+  height: 300px;
+  overflow-y: scroll;
+  background: #FFCCBC;
+}
+.OuterBlock_1 > .InnerBlock {
+  width: 300px;
+  vertical-align: top;
+}
+
+.OuterBlock_1 > .InnerBlock::after {
+  display: block;
+  border-top: 1px solid black;
+  text-shadow: 2px 2px 3px rgba(0,0,0,0.5);
+}
+.OuterBlock_1 > .InnerBlock > span::first-letter {
+  font-size: 150%;
+}
+
+.OuterBlock_1 > .InnerBlock:nth-child(1) {
+  background: #FFCC80;
+}
+.OuterBlock_1 > .InnerBlock:nth-child(1)::after {
+  content: 'Хитроумные азиаты, впрочем, изобрели еще несколько типов кавычек, европейцам неизвестных.';
+  background-color: #FFB74D;
+}
+.OuterBlock_1 > .InnerBlock:nth-child(1) > span::first-letter {
+  color: #EF6C00;
+}
+
+.OuterBlock_1 > .InnerBlock:nth-child(2) {
+  background: #EF9A9A;
+}
+.OuterBlock_1 > .InnerBlock:nth-child(2)::after {
+  content: 'Разве что в текстовых процессорах — они вставляют кавычки должного вида сами, автоматически, если иное не указано в опциях.';
+  background-color: #E57373;
+}
+.OuterBlock_1 > .InnerBlock:nth-child(2) > span::first-letter {
+  color: #D32F2F;
+}
+
+.OuterBlock_1 > .InnerBlock:nth-child(3) {
+  background: #E6EE9C;
+}
+.OuterBlock_1 > .InnerBlock:nth-child(3)::after {
+  content: 'Примечательно, пожалуй, то, что даже обычные кавычки, выглядящие как обращенные навстречу друг другу пары поднятых вверх запятых, с тем же успехом могут выглядеть и как обращенные друг к другу поднятые вверх круглые елочки.';
+  background-color: #CDDC39;
+}
+.OuterBlock_1 > .InnerBlock:nth-child(3) > span::first-letter {
+  color: #827717;
+}
+
+.OuterBlock_2 {
+  width: 1400px;
+  margin-top: 20px;
+  background: #B2DFDB;
+}
+.OuterBlock_2 > .InnerBlock {
+  width: 300px;
+  height: 300px;
+  overflow-y: scroll;
+}
+
+.OuterBlock_2 > .InnerBlock::before {
+  display: block;
+  border-bottom: 1px solid black;
+  font-style: italic;
+}
+.OuterBlock_2 > .InnerBlock > span::first-line {
+  font-size: 200%;
+}
+
+.OuterBlock_2 > .InnerBlock:nth-child(1) {
+  background: #90CAF9;
+}
+.OuterBlock_2 > .InnerBlock:nth-child(1)::before {
+  content: 'При книгопечатании тоже сначала по-всякому крутили запятые, но постепенно история развития книгопечатных шрифтов привела к тому, что стали разрабатываться свои собственные печатные знаки для каждой задачи.';
+  background: #42A5F5;
+}
+.OuterBlock_2 > .InnerBlock:nth-child(1) > span::first-line {
+  color: #1565C0;
+}
+
+.OuterBlock_2 > .InnerBlock:nth-child(2) {
+  background: #B39DDB;
+}
+.OuterBlock_2 > .InnerBlock:nth-child(2)::before {
+  content: 'Двойная симметричная кавычка нашла в русском языке и ещё одно применение — ей иногда заменяли твёрдый знак.';
+  background: #9575CD;
+}
+.OuterBlock_2 > .InnerBlock:nth-child(2) > span::first-line {
+  color: #512DA8;
+}
+
+.OuterBlock_2 > .InnerBlock:nth-child(3) {
+  background: #80DEEA;
+}
+.OuterBlock_2 > .InnerBlock:nth-child(3)::before {
+  content: 'В 20-х годах прошлого века такое использование кавычки имело место и в газетах и прочих печатных изданиях.';
+  background: #00BCD4;
+}
+.OuterBlock_2 > .InnerBlock:nth-child(3) > span::first-line {
+  color: #00838F;
+}
+
+q[data-type="russian"] {
+  quotes: "«" "»";
+}
+
+q[data-type="russian"] q[data-type="russian"],
+q[data-type="russian-secondary"] {
+  quotes: "„" "“";
+}
+
+q[data-type="english"] {
+  quotes: "‘" "’";
+}
+q[data-type="english-secondary"] {
+  quotes: "“" "”";
+}
+
+q[data-type="typewriter"] {
+  quotes: '"' '"';
+}
+
+q[data-type="german"] {
+  quotes: "»" "«";
+}
+
+q[data-type="swedish"] {
+  quotes: "»" "»";
+}
+q[data-type="swedish-secondary"] {
+  quotes: "”" "”";
+}
+
+q[data-type="polish"] {
+  quotes: "„" "”";
+}
